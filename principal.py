@@ -1,7 +1,8 @@
-#Importacion de ficheros
-from login import beginLogin
+# Importacion de ficheros
+#from login import beginLogin
+from register import register
 
-#Definicion del menu principal
+# Definicion del menu principal
 def firstMenu():
     continueIn = True
     while(continueIn):
@@ -24,7 +25,20 @@ def firstMenu():
                 correctOption = True
                 executeOption(option)
 
+# Funcion para ejecutar la opcion seleccionada
 def executeOption(option):
-    print(option)
+    if option ==1:
+        print('hola')
+        # try:
+        #     users = DAO.listUsers()
+        #     if len(users)>0:
+        #         #Falta ejecutar
+        #     else:
+        #         print('No se ha encontrado usuarios')
+        # except:
+        #     print('Ocurrio un error')
+    elif option ==2:
+        user_registration = register()
+        user_registration.new_user()
 
 firstMenu()
