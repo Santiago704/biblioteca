@@ -16,3 +16,4 @@ class newBook():
             print(f'{nomLibro} registrado con exito')
         except mysql.connector.IntegrityError:
             print('Libro no registrado')
+#-----
