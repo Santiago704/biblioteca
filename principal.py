@@ -2,6 +2,8 @@
 from login import login
 from register import register
 from newBook import newBook
+from rentBook import rentBook
+from backBook import backBook
 
 # Definicion del menu principal
 def firstMenu():
@@ -46,13 +48,14 @@ def secondMenu():
             print('======= MENU SECUNDARIO ======')
             print('1. Ingresar nuevo libro')
             print('2. Hacer prestamo de un libro')
-            print('3. Volver al menu inicial')
+            print('3. Devolver libro')
+            print('4. Volver al menu inicial')
             print('=============================')
             option = int(input('Seleccioneuna opcion'))
 
-            if option <1 or option>3:
+            if option <1 or option>4:
                 print('Opcion incorrecta, ingrese nuevamente')
-            elif option ==3:
+            elif option ==4:
                 continueIn = False
                 print('Voliste al menu inicial')
                 break
@@ -66,8 +69,10 @@ def executeOptionSecondMenu(option):
         new_book = newBook()
         new_book.new_book_added()
     elif option ==2:
-        user_registration = register()
-        #user_registration.new_user()
-
+        rent = rentBook()
+        rent.rent()
+    elif option ==3:
+        back = backBook()
+        back.back()
 
 firstMenu()
